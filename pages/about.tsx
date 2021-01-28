@@ -7,9 +7,7 @@ export default function About() {
       <Header />
       <Main>
         <VStack>
-          <Heading as='h1' alignSelf='flex-start'>
-            About
-          </Heading>
+          <Heading as='h1'>About</Heading>
           <VStack spacing={5} fontSize='xl'>
             <Text>
               I began writing Java in the 10th grade thanks to coding courses

@@ -28,6 +28,7 @@ import {
   AtSignIcon,
 } from '@chakra-ui/icons';
 import NextLink from 'next/link';
+import Head from 'next/head';
 import { forwardRef, ReactNode, useRef } from 'react';
 import { ColorModeBtn } from './ColorModeBtn';
 import { NextChakraLink } from '../components/NextChakraLink';
@@ -38,9 +39,17 @@ interface Props {
 
 export function Layout({ children }: Props) {
   return (
-    <Box position='relative' minH='100vh' className='container'>
-      {children}
-    </Box>
+    <>
+      <Head>
+        <link
+          rel='stylesheet'
+          href='https://unpkg.com/prismjs@0.0.1/themes/prism-tomorrow.css'
+        />
+      </Head>
+      <Box position='relative' minH='100vh' className='container'>
+        {children}
+      </Box>
+    </>
   );
 }
 

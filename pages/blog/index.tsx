@@ -18,7 +18,7 @@ export default function Blog({ posts }: Props) {
           <List>
             {posts.map((post) => (
               <ListItem key={post.slug}>
-                <NextChakraLink href={`blog/${post.slug}`}>
+                <NextChakraLink href={`/blog/${post.slug}`}>
                   {post.slug}
                 </NextChakraLink>
               </ListItem>

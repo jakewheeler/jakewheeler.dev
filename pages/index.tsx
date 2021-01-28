@@ -12,7 +12,7 @@ export default function Home({ cookies }: Props) {
   return (
     <Chakra cookies={cookies}>
       <Layout>
-        <Header></Header>
+        <Header />
         <Main>
           <VStack>
             <Img />

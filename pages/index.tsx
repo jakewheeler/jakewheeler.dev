@@ -2,6 +2,7 @@ import { Box, Heading, Link, Text, VStack } from '@chakra-ui/react';
 import { Chakra } from '../components/Chakra';
 import { Header, Layout, Main, Footer } from '../components/Layout';
 import Image from 'next/image';
+import { Img } from '../components/Img';
 
 interface Props {
   cookies?: string;
@@ -14,21 +15,16 @@ export default function Home({ cookies }: Props) {
         <Header></Header>
         <Main>
           <VStack>
-            <Image
-              src='/jake.jpg'
-              alt='Picture of Jake Wheeler'
-              width={200}
-              height={200}
-            />
+            <Img />
+            <Heading as='h1'>Hey, I'm Jake 👋🏼</Heading>
             <VStack>
-              <Heading as='h1'>Hey, I'm Jake 👋🏼</Heading>
-              <VStack spacing={5}>
-                <Text fontSize='lg'>
+              <VStack spacing={5} fontSize='xl'>
+                <Text>
                   I'm a software engineer living in Erie, Pennsylvania and am
                   currently working at a Fortune 500 insurance company called{' '}
                   <Link>Erie Insurance.</Link>
                 </Text>
-                <Text fontSize='lg'>
+                <Text>
                   I recently completed Erie Insurance's IT Apprentice program, a
                   rotational program that gave me the opportunity to become part
                   of a new team every six months for the past two years. During

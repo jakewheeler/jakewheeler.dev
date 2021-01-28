@@ -17,6 +17,8 @@ import {
   List,
   ListItem,
   ListIcon,
+  Center,
+  Container,
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -27,7 +29,7 @@ import {
 } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import { forwardRef, ReactNode, useRef } from 'react';
-import { ColorModeToggle } from './ColorModeToggle';
+import { ColorModeBtn } from './ColorModeBtn';
 import { NextChakraLink } from '../components/NextChakraLink';
 
 interface Props {
@@ -84,7 +86,7 @@ function MenuDrawer() {
           <DrawerContent>
             <DrawerCloseButton />
             <DrawerHeader>
-              <ColorModeToggle />
+              <ColorModeBtn />
             </DrawerHeader>
 
             <DrawerBody>
@@ -120,9 +122,9 @@ type MainProps = Props & BoxProps;
 
 export const Main = forwardRef<HTMLDivElement, MainProps>((props, ref) => {
   return (
-    <Box as='main' {...props} ref={ref} p={10} paddingBottom='3rem'>
-      {props.children}
-    </Box>
+    <Center as='main' {...props} ref={ref} p={10} paddingBottom='3rem'>
+      <Container maxW={900}>{props.children}</Container>
+    </Center>
   );
 });
 

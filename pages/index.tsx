@@ -1,7 +1,6 @@
-import { Box, Heading, Link, Text, VStack } from '@chakra-ui/react';
+import { Heading, Link, Text, VStack } from '@chakra-ui/react';
 import { Chakra } from '../components/Chakra';
 import { Header, Layout, Main, Footer } from '../components/Layout';
-import Image from 'next/image';
 import { Img } from '../components/Img';
 
 interface Props {

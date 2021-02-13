@@ -1,50 +1,44 @@
-import { Heading, Link, Text, VStack } from '@chakra-ui/react';
-import { Chakra } from '../components/Chakra';
-import { Header, Layout, Main, Footer } from '../components/Layout';
-import { Img } from '../components/Img';
+import Head from 'next/head';
+import Link from 'next/link';
+import { GetStaticProps } from 'next';
+import { getAllPosts, Post } from '../utils/posts';
+import { Layout } from '@components/Layout';
 
 interface Props {
-  cookies?: string;
+  posts: Post[];
 }
 
-export default function Home({ cookies }: Props) {
+export default function Home({ posts }: Props) {
   return (
-    <Chakra cookies={cookies}>
+    <>
+      <Head>
+        <title>Jake Wheeler</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+
       <Layout>
-        <Header />
-        <Main>
-          <VStack>
-            <Img />
-            <Heading as='h1'>Hey, I'm Jake 👋🏼</Heading>
-            <VStack>
-              <VStack spacing={5} fontSize='xl'>
-                <Text>
-                  I'm a software engineer living in Erie, Pennsylvania and am
-                  currently working at a Fortune 500 insurance company called{' '}
-                  <Link>Erie Insurance.</Link>
-                </Text>
-                <Text>
-                  I recently completed Erie Insurance's IT Apprentice program, a
-                  rotational program that gave me the opportunity to become part
-                  of a new team every six months for the past two years. During
-                  this time, I helped teams all over the IT organization solve a
-                  wide range of software engineering problems.
-                </Text>
-                <Text>
-                  My current role is focused on platform engineering and AWS
-                  cloud infrastructure automation using tools like Python and
-                  Terraform. My team is working to create tooling to allow our
-                  IT and business partners to provision cloud infrastructure on
-                  demand and making the transition into DevOps.
-                </Text>
-              </VStack>
-            </VStack>
-          </VStack>
-        </Main>
-        <Footer></Footer>
+        <div className='flex flex-col items-center justify-left align-left space-y-10'>
+          {posts.map((post) => (
+            <div
+              key={post.title}
+              className='p-6 w-96 h-28 text-center bg-gray-200 rounded-xl shadow-md flex justify-center items-center'
+            >
+              <Link href={`/blog/${post.slug}`}>
+                <a className='text-xl font-medium text-black'>{post.title}</a>
+              </Link>
+            </div>
+          ))}
+        </div>
       </Layout>
-    </Chakra>
+    </>
   );
 }
 
-export { getServerSideProps } from '../components/Chakra';
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = getAllPosts();
+  return {
+    props: {
+      posts,
+    },
+  };
+};

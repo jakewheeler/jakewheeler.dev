@@ -1,8 +1,14 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
-import { Post } from '../types/post';
-import { compareAsc, format } from 'date-fns';
+import { format, compareAsc } from 'date-fns';
+
+export interface Post {
+  slug: string;
+  date: string;
+  title: string;
+  content: string;
+}
 
 const postsDirectory = join(process.cwd(), '_posts');
 

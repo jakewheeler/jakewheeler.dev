@@ -31,7 +31,7 @@ function Footer() {
 
 export function Layout({ children }: Props) {
   return (
-    <div className='min-h-full'>
+    <div className='flex flex-col min-h-screen'>
       <Header />
       <Container>{children}</Container>
       <Footer />

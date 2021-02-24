@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { getAllPosts, getPostBySlug, Post } from '../../utils/posts';
 import ReactMarkdown from 'react-markdown/with-html';
 import { Layout } from '@components/Layout';
+import { CodeBlock } from '@components/CodeBlock';
 
 interface Props {
   post: Post;
@@ -13,7 +14,11 @@ export default function BlogPost({ post }: Props) {
       <article className='prose lg:prose-xl'>
         <h1>{post.title}</h1>
         <p className='font-semibold'>{post.date}</p>
-        <ReactMarkdown children={post.content} allowDangerousHtml={false} />
+        <ReactMarkdown
+          children={post.content}
+          renderers={{ code: CodeBlock }}
+          allowDangerousHtml={false}
+        />
       </article>
     </Layout>
   );

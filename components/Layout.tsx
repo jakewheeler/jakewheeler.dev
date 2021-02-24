@@ -14,9 +14,9 @@ function Header() {
 interface Props {
   children: React.ReactNode;
 }
-function Container({ children }: Props) {
+function Content({ children }: Props) {
   return (
-    <main className='flex flex-col justify-center flex-1 px-20 py-20 min-h-full'>
+    <main className='flex flex-col flex-1 px-20 py-20 min-h-full lg:items-center'>
       {children}
     </main>
   );
@@ -86,7 +86,7 @@ export function Layout({ children }: Props) {
   return (
     <div className='flex flex-col min-h-screen'>
       <Header />
-      <Container>{children}</Container>
+      <Content>{children}</Content>
       <Footer />
     </div>
   );

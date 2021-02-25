@@ -3,10 +3,17 @@ import Image from 'next/image';
 
 function Header() {
   return (
-    <header className='py-5 px-3 flex'>
-      <Link href='/'>
-        <a className='prose text-3xl'>Jake Wheeler</a>
-      </Link>
+    <header className='py-5 px-3 flex flex-col space-y-2'>
+      <div>
+        <Link href='/'>
+          <a className='prose text-3xl hover:text-blue-600'>Jake Wheeler</a>
+        </Link>
+      </div>
+      <div>
+        <Link href='/writing'>
+          <a className='prose text-lg hover:text-blue-600'>Writing</a>
+        </Link>
+      </div>
     </header>
   );
 }

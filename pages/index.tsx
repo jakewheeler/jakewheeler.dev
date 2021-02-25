@@ -19,14 +19,14 @@ export default function Home({ posts }: Props) {
       <Layout>
         <div className='flex flex-col items-center justify-left align-left space-y-10'>
           {posts.map((post) => (
-            <div
+            <p
               key={post.title}
-              className='p-6 w-96 h-28 text-center bg-gray-200 rounded-xl shadow-md flex justify-center items-center'
+              className='p-6 text-center bg-gray-200 rounded-xl shadow-md flex justify-center items-center'
             >
               <Link href={`/blog/${post.slug}`}>
                 <a className='text-xl font-medium text-black'>{post.title}</a>
               </Link>
-            </div>
+            </p>
           ))}
         </div>
       </Layout>

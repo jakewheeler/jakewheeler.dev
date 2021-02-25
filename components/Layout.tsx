@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function Header() {
   return (
-    <header className='py-5 px-3 flex bg-gray-300 w-full'>
+    <header className='py-5 px-3 flex'>
       <Link href='/'>
         <a className='prose text-3xl'>Jake Wheeler</a>
       </Link>

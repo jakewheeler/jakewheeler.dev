@@ -17,22 +17,22 @@ export default function Writing({ posts }: Props) {
       </Head>
 
       <Layout>
-        <div className='blog-posts'>
-          <ul className='flex flex-col items-center justify-left align-left space-y-10'>
+        <nav className='blog-posts'>
+          <ul className='flex flex-col items-center justify-left align-left space-y-8'>
             {posts.map((post) => (
-              <li key={post.title}>
-                <div className='text-center bg-gray-200 hover:bg-gray-300 hover:text-blue-600 hover:underline rounded-xl shadow-md flex justify-center items-center'>
+              <li className='min-w-full' key={post.title}>
+                <div className='text-center bg-gray-200 hover:bg-gray-300 hover:text-blue-600 hover:underline rounded-md shadow-md flex justify-center items-center'>
                   <Link href={`/writing/${post.slug}`}>
-                    <a className='text-xl font-medium w-full h-full p-6'>
-                      <p>{post.title}</p>
-                      <p>{post.date}</p>
+                    <a className='w-full h-full p-4'>
+                      <p className='text-lg font-medium'>{post.title}</p>
+                      <p className='text-md'>{post.date}</p>
                     </a>
                   </Link>
                 </div>
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
       </Layout>
     </>
   );

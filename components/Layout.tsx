@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 function Header() {
   return (
@@ -11,13 +10,13 @@ function Header() {
           </a>
         </Link>
       </div>
-      <div className='flex flex-row justify-between flex-wrap'>
+      <nav className='flex flex-row justify-between flex-wrap'>
         <Link href='/writing'>
           <a className='prose text-lg hover:text-blue-600 hover:underline'>
             Writing
           </a>
         </Link>
-        <div className='space-x-5'>
+        <nav className='space-x-5'>
           <a
             href='https://twitter.com/_jakewheeler'
             className='prose text-lg hover:text-blue-600 hover:underline'
@@ -36,8 +35,8 @@ function Header() {
           >
             GitHub
           </a>
-        </div>
-      </div>
+        </nav>
+      </nav>
     </header>
   );
 }

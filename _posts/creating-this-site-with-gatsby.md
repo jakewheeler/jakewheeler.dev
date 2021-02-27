@@ -1,8 +1,10 @@
 ---
-slug: "/blog/creating-this-site-with-gatsbyjs"
-date: "2019-12-09"
-title: "Creating This Site With Gatsby.js"
+slug: '/blog/creating-this-site-with-gatsbyjs'
+date: '2019-12-09'
+title: 'Creating This Site With Gatsby.js'
 ---
+
+**EDIT 2-27-21: I've since rebuilt this site with [Next.js](https://nextjs.org/)!**
 
 Back in July, I decided I wanted to learn React and Node.js so that I could start working on building a web app. Like many others, I decided that the excellent [Create React App](https://github.com/facebook/create-react-app) project was my way to get going. As I got deeper and deeper into React and the JavaScript ecosystem in general, I began seeing projects like [Gatsby.js](https://www.gatsbyjs.com/) and [Next.js](https://nextjs.org/) being talked about constantly. I had seen people refer to Gatsby as a "static-site generator" but I didn't really grasp what that meant or how it was different from Create React App.
 

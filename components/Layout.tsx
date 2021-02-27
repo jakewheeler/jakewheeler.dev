@@ -17,7 +17,7 @@ function Header() {
             Writing
           </a>
         </Link>
-        <div className='space-x-3'>
+        <div className='space-x-5'>
           <a
             href='https://twitter.com/_jakewheeler'
             className='prose text-lg hover:text-blue-600 hover:underline'

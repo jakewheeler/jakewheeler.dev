@@ -11,7 +11,7 @@ interface Props {
 export default function BlogPost({ post }: Props) {
   return (
     <Layout>
-      <article className='prose lg:prose-xl'>
+      <article className='prose prose-blue prose-md lg:prose-lg xl:prose-xl'>
         <h1>{post.title}</h1>
         <p className='font-semibold'>{post.date}</p>
         <ReactMarkdown

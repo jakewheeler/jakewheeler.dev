@@ -10,9 +10,9 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <div className='flex flex-col space-y-4'>
+        <div className='flex flex-col space-y-6'>
           <p className='text-3xl md:text-5xl'>Hey, I'm Jake 👋🏼</p>
-          <p className='text-md'>
+          <p className='text-lg md:text-xl lg:text-2xl'>
             I'm a full-stack software engineer interested in TypeScript, Node,
             React, AWS, and a lot more!
           </p>

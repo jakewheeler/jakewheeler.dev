@@ -16,12 +16,12 @@ export default function Writing({ posts }: Props) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <Layout>
+      <Layout title='Writing'>
         <nav className='blog-posts'>
           <ul className='flex flex-col items-center justify-left align-left space-y-8'>
             {posts.map((post) => (
               <li className='min-w-full' key={post.title}>
-                <div className='text-center bg-gray-200 hover:bg-gray-300 hover:text-blue-600 hover:underline rounded-md shadow-md flex justify-center items-center'>
+                <div className='text-center bg-gray-300 hover:bg-gray-500 hover:underline rounded-md shadow-md flex justify-center items-center'>
                   <Link href={`/writing/${post.slug}`}>
                     <a className='w-full h-full p-4'>
                       <p className='text-lg font-medium'>{post.title}</p>

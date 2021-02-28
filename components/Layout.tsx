@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Head from 'next/head';
 
 function Header() {
   return (
@@ -41,10 +42,11 @@ function Header() {
   );
 }
 
-interface Props {
+interface ContentProps {
   children: React.ReactNode;
 }
-function Content({ children }: Props) {
+
+function Content({ children }: ContentProps) {
   return (
     <main className='flex flex-col flex-1 p-3 md:p-20 min-h-full'>
       {children}
@@ -52,9 +54,22 @@ function Content({ children }: Props) {
   );
 }
 
-export function Layout({ children }: Props) {
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+}
+
+export function Layout({ children, title = 'Home' }: LayoutProps) {
   return (
     <div className='max-w-screen-md mx-auto min-h-full'>
+      <Head>
+        <title>Jake Wheeler | {title}</title>
+        <link rel='icon' href='/favicon.ico' />
+        <meta charSet='utf-8' />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <meta name='Description' content={title} />
+      </Head>
+
       <div className='flex flex-col flex-1 min-h-full'>
         <Header />
         <Content>{children}</Content>

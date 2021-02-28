@@ -12,8 +12,8 @@ export default function Home() {
 
       <Layout>
         <div className='flex flex-col space-y-6'>
-          <p className='text-3xl md:text-5xl'>Hey, I'm Jake 👋🏼</p>
-          <div>
+          <p className='text-3xl md:text-5xl'>Hey, I'm Jake 👋🏻</p>
+          <div className='text-center'>
             <Image
               className='rounded-3xl'
               src='/me.png'
@@ -21,7 +21,7 @@ export default function Home() {
               height='575px'
             />
           </div>
-          <p className='text-lg md:text-xl lg:text-2xl'>
+          <p className='text-lg text-center md:text-xl lg:text-2xl'>
             I'm a full-stack software engineer interested in TypeScript, Node,
             React, AWS, and a lot more!
           </p>

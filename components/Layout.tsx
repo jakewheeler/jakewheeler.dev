@@ -19,20 +19,20 @@ function Header() {
         </Link>
         <nav className='space-x-5'>
           <a
-            href='https://twitter.com/_jakewheeler'
             className='prose text-lg hover:text-blue-600 hover:underline'
+            href='https://twitter.com/_jakewheeler'
           >
             Twitter
           </a>
           <a
-            href='https://www.linkedin.com/in/jakewheeler17/'
             className='prose text-lg hover:text-blue-600 hover:underline'
+            href='https://www.linkedin.com/in/jakewheeler17/'
           >
             LinkedIn
           </a>
           <a
-            href='https://github.com/jakewheeler'
             className='prose text-lg hover:text-blue-600 hover:underline'
+            href='https://github.com/jakewheeler'
           >
             GitHub
           </a>

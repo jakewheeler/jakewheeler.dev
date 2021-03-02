@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 function Header() {
   return (
@@ -56,10 +57,19 @@ function Content({ children }: ContentProps) {
 
 interface LayoutProps {
   children: React.ReactNode;
-  title?: string;
+  title: string;
+  description: string;
+  twitterHandle?: string;
 }
 
-export function Layout({ children, title = 'Home' }: LayoutProps) {
+export function Layout({
+  children,
+  title,
+  description,
+  twitterHandle = '@_jakewheeler',
+}: LayoutProps) {
+  const router = useRouter();
+
   return (
     <div className='max-w-screen-md mx-auto min-h-full'>
       <Head>
@@ -67,7 +77,23 @@ export function Layout({ children, title = 'Home' }: LayoutProps) {
         <link rel='icon' href='/favicon.ico' />
         <meta charSet='utf-8' />
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-        <meta name='Description' content={title} />
+        <meta name='Description' content={description} />
+        <meta property='og:title' content={title} key='ogtitle' />
+        <meta property='og:description' content={description} key='ogdesc' />
+
+        <meta name='twitter:card' content='summary' key='twcard' />
+        <meta name='twitter:creator' content={twitterHandle} key='twhandle' />
+
+        {/* Open Graph */}
+        <meta property='og:url' content={router.pathname} key='ogurl' />
+        <meta property='og:image' content='/me.png' key='ogimage' />
+        <meta
+          property='og:site_name'
+          content="Jake Wheeler's personal website"
+          key='ogsitename'
+        />
+        <meta property='og:title' content={title} key='ogtitle' />
+        <meta property='og:description' content={description} key='ogdesc' />
       </Head>
 
       <div className='flex flex-col flex-1 min-h-full'>

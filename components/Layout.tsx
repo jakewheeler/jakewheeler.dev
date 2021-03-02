@@ -86,7 +86,11 @@ export function Layout({
 
         {/* Open Graph */}
         <meta property='og:url' content={router.pathname} key='ogurl' />
-        <meta property='og:image' content='/me.png' key='ogimage' />
+        <meta
+          property='og:image'
+          content='https://raw.githubusercontent.com/jakewheeler/jakewheeler.dev/main/public/me.png'
+          key='ogimage'
+        />
         <meta
           property='og:site_name'
           content="Jake Wheeler's personal website"

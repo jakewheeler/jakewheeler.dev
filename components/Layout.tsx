@@ -4,35 +4,35 @@ import { useRouter } from 'next/router';
 
 function Header() {
   return (
-    <header className='py-5 px-3 flex flex-col space-y-5 min-w-full'>
+    <header className='divide-y divide-gray-300 divide-double py-5 px-3 flex flex-col space-y-5 min-w-full'>
       <div>
         <Link href='/'>
-          <a className='prose text-3xl hover:text-blue-600 hover:underline'>
-            Jake Wheeler
+          <a className=' hover:text-blue-600 hover:underline'>
+            <h1 className='prose text-3xl'>Jake Wheeler</h1>
           </a>
         </Link>
       </div>
-      <nav className='flex flex-row justify-between flex-wrap'>
+      <nav className='flex flex-row justify-between flex-wrap py-3'>
         <Link href='/writing'>
-          <a className='prose text-lg hover:text-blue-600 hover:underline'>
+          <a className='prose font-semibold text-lg hover:text-blue-600 hover:underline'>
             Writing
           </a>
         </Link>
         <nav className='space-x-5'>
           <a
-            className='prose text-lg hover:text-blue-600 hover:underline'
+            className='prose font-semibold text-lg hover:text-blue-600 hover:underline'
             href='https://twitter.com/_jakewheeler'
           >
             Twitter
           </a>
           <a
-            className='prose text-lg hover:text-blue-600 hover:underline'
+            className='prose font-semibold text-lg hover:text-blue-600 hover:underline'
             href='https://www.linkedin.com/in/jakewheeler17/'
           >
             LinkedIn
           </a>
           <a
-            className='prose text-lg hover:text-blue-600 hover:underline'
+            className='prose font-semibold text-lg hover:text-blue-600 hover:underline'
             href='https://github.com/jakewheeler'
           >
             GitHub

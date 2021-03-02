@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <Layout title='Home' description="Jake Wheeler's personal website">
       <div className='flex flex-col space-y-6'>
-        <p className='prose text-3xl md:text-5xl'>Hey, I'm Jake 👋🏻</p>
+        <h2 className='prose text-center text-3xl md:text-5xl'>
+          Hey, I'm Jake 👋🏻
+        </h2>
         <div className='text-center'>
           <Image
             className='rounded-3xl'
